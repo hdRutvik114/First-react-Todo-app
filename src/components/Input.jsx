@@ -8,13 +8,17 @@ const Input = (props) => {
     console.log(value);
 
   setdata({name:value,check:false});
-  }   
 
+  }   
+function addf(){
+  props.data1(data);
+  setdata({name:"",check:"false"});
+}
  
     return (
         <div className='max-w-md flex w-full overflow-hidden mx-auto mt-2'>
             <input onChange={input} type="text" name="inputdata"  className='w-full bg-white outline-0 p-2 rounded-l-xl' value={data.name} />
-            <button  onClick={()=>props.data1(data) } className='px-3 py-2 text-white bg-blue-500 hover:shadow-2xl '>ADD</button>
+            <button  onClick={addf}  className='px-3 py-2 text-white bg-blue-500 hover:shadow-2xl '>ADD</button>
         </div>
     );
 };
